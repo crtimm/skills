@@ -4,6 +4,11 @@
     "title": "Patient API",
     "version": "1.0.0"
   },
+  "servers": [
+    {
+      "url": "https://example.com"
+    }
+  ],
   "paths": {
     "/patientSummary": {
       "post": {
