@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "https://example.com"
+      "url": "https://httpbin.org"
     }
   ],
   "paths": {
