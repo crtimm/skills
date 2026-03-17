@@ -1,48 +1,14 @@
 {
-  "openapi": "3.0.1",
-  "info": {
-    "title": "Patient API",
-    "version": "1.0"
+  "schema_version": "v1",
+  "name_for_human": "Patient Summary",
+  "name_for_model": "get_patient_summary",
+  "description_for_human": "Retrieve a patient summary",
+  "description_for_model": "Use this when the user asks for patient summaries, clinical history, or patient details.",
+  "auth": {
+    "type": "none"
   },
-  "paths": {
-    "/patientSummary": {
-      "post": {
-        "operationId": "getPatientSummary",
-        "summary": "Get patient summary",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "patientId": {
-                    "type": "string"
-                  }
-                },
-                "required": ["patientId"]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Patient summary",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "summary": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+  "api": {
+    "type": "openapi",
+    "url": "https://raw.githubusercontent.com/crtimm/skills/main/openapi.json"
   }
 }
