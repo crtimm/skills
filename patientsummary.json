@@ -9,6 +9,6 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://raw.githubusercontent.com/crtimm/skills/main/openapi.json"
+    "url": "https://raw.githubusercontent.com/crtimm/skills/refs/heads/main/openapi.json"
   }
 }
