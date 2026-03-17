@@ -10,7 +10,7 @@
     }
   ],
   "paths": {
-    "/patientSummary": {
+    "/post": {
       "post": {
         "operationId": "getPatientSummary",
         "summary": "Get patient summary",
@@ -32,19 +32,7 @@
         },
         "responses": {
           "200": {
-            "description": "Patient summary response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "summary": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
+            "description": "Success"
           }
         }
       }
