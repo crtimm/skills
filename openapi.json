@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Patient API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/patientSummary": {
+      "post": {
+        "operationId": "getPatientSummary",
+        "summary": "Get patient summary",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "patientId": {
+                    "type": "string"
+                  }
+                },
+                "required": ["patientId"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Patient summary response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "summary": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
