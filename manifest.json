@@ -58,19 +58,3 @@
     }
   }
 }
-```
-
----
-
-### The 4 parts you must customize
-
-**1. `endpoints.endpointUrl`**
-Replace with your actual bot's Azure URL — this is where Copilot Studio sends messages.
-```
-"endpointUrl": "https://my-weather-bot.azurewebsites.net/api/messages"
-```
-
-**2. `endpoints.msAppId`**
-This is the **Application (Client) ID** from your bot's Entra ID app registration in Azure portal.
-```
-"msAppId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
