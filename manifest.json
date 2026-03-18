@@ -1,0 +1,76 @@
+{
+  "$schema": "https://schemas.botframework.com/schemas/skills/skill-manifest-2.2.preview-0.json",
+  "$id": "MySimpleSkill",
+  "name": "My Simple Skill",
+  "version": "1.0",
+  "description": "A simple skill that answers a basic question",
+  "publisherName": "Your Name or Company",
+  "privacyUrl": "https://yoursite.com/privacy",
+  "copyright": "Copyright (c) 2025",
+  "license": "",
+  "iconUrl": "https://yoursite.com/icon.png",
+  "tags": ["sample", "simple"],
+  "endpoints": [
+    {
+      "name": "production",
+      "protocol": "BotFrameworkV3",
+      "description": "Production endpoint for the skill",
+      "endpointUrl": "https://YOUR-BOT-APP.azurewebsites.net/api/messages",
+      "msAppId": "YOUR-ENTRA-APP-CLIENT-ID"
+    }
+  ],
+  "activities": {
+    "GetWeather": {
+      "description": "Returns the weather for a given city",
+      "type": "event",
+      "name": "GetWeather",
+      "value": {
+        "$ref": "#/definitions/GetWeatherInput"
+      },
+      "resultValue": {
+        "$ref": "#/definitions/GetWeatherOutput"
+      }
+    }
+  },
+  "definitions": {
+    "GetWeatherInput": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string",
+          "description": "The name of the city to get weather for"
+        }
+      },
+      "required": ["city"]
+    },
+    "GetWeatherOutput": {
+      "type": "object",
+      "properties": {
+        "weather": {
+          "type": "string",
+          "description": "A description of the current weather"
+        },
+        "temperature": {
+          "type": "string",
+          "description": "The current temperature"
+        }
+      }
+    }
+  }
+}
+```
+
+---
+
+### The 4 parts you must customize
+
+**1. `endpoints.endpointUrl`**
+Replace with your actual bot's Azure URL — this is where Copilot Studio sends messages.
+```
+"endpointUrl": "https://my-weather-bot.azurewebsites.net/api/messages"
+```
+
+**2. `endpoints.msAppId`**
+This is the **Application (Client) ID** from your bot's Entra ID app registration in Azure portal.
+```
+"msAppId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
